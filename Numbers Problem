@@ -1,0 +1,27 @@
+Problem Statement - To count the digits in a provided number. Incase the number is negeative then return -1;
+
+I/P - number
+O/P - number of digts
+
+Edge cases-
+
+1. number can be positive
+2. number can be 0
+3. number can be negeative
+4. number can be single digit 
+5. number can be n digit
+
+
+function int CountDigits(int num)
+{
+  if num<0 return -1;
+  if(num<=0 || (num/10==0)) return 1;
+  int digits=1;
+
+  while(num/10>0)
+  {
+    num=num/10;
+    digits++;
+  }
+  return digits;
+}
